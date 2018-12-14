@@ -81,28 +81,29 @@ function purchaseItem(){
             console.log("Sorry, we do not have that in stock.");
             welcome();
         }else{
-          // inquirer
-          //  .prompt([
-          //    {
-          //     type: "list-input",
-          //     message: "Your total is: " + orderTotal.toFixed(2) + "$ ",
-          //     choices: ["Place Order","Cancel Order"],
-          //     name: "sure"
-          //    }
-          //  ])
-          //  .then(function(inquirerResponse) {
-            //  if(inquirerResponse.sure === "Place Order"){
+            function(){
+          inquirer
+           .prompt([
+             {
+              type: "list-input",
+              message: "Your total is: " + orderTotal.toFixed(2) + "$ ",
+              choices: ["Place Order","Cancel Order"],
+              name: "sure"
+             }
+           ])
+           .then(function(inquirerResponse) {
+             if(inquirerResponse.sure === "Place Order"){
                console.log("------------------------------ORDER PLACED! Thank You!-------------------------------------------");
                console.log(" ");
             console.log("Purchase of "+ itemQuantity + " " + res[0].product_name +  " for a total of " + orderTotal.toFixed(2) + "$ Complete... Thank you, shop with us again soon!");
             newStockQuantity = currentStock - itemQuantity;
             updateStock();
-            //  }else{
-            //    console.log("order canceled");
-            //    welcome();
-            //  }
-          //  });
-        
+             }else{
+               console.log("order canceled");
+               welcome();
+             }
+           });
+            }
       }
     });
 

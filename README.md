@@ -8,5 +8,5 @@ This is a simple simulation of shopping on line. There is an sql database storin
 The user enters a number corresponding to the product they want to select. Inquirer then prompts the user asking how many of the item they chose they would like to buy. After the user enters another number and presses enter, a READ query goes to the database to check if there is enough stock for the order to be completed. If there is enough items in stock, another UPDATE query will update the database to reflect that some or all of the units have been purchased. Then the user will se a console log of their order summary including item purchased, quantity purchased and USD total. I tried to make a function where the user is prompted using inquire to confirm they want to place the order after seeing their order total. However it didn't work, the inquirer prompt wouldn't fire for some reason.
 
 
-![working](screenshots/ScreenShot1.png)
+![workingimage](ScreenShot1.png)
 
